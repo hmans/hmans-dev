@@ -4,17 +4,21 @@
 /* Configuration */
 
 :root {
+  /* Colors */
   --background-color: #fff;
   --text-color: #333;
   --link-color: orange;
+
+  /* Page Width */
+  --page-width: 750px;
 }
 
 /* Utility classes */
 
 .container {
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: var(--page-width);
+  padding: 0 1rem;
+  margin: 0 auto;
 }
 
 /* Main layout */
@@ -31,6 +35,8 @@ body {
   background-color: var(--background-color);
   color: var(--text-color);
   font: 16px/1.5 "Noto Sans";
+
+  padding-top: 3rem;
 }
 
 h1,
