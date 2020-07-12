@@ -7,7 +7,14 @@
       {{ title }}
       &middot; Hendrik Mans
     </title>
-    <link rel="stylesheet" href="/css/hmans.css">
+
+    {# Inline our CSS like a crazy person #}
+    {% set css %}
+    {% include "hmans.css" %}
+    {% endset %}
+    <style>
+      {{css | cssmin | safe}}
+    </style>
   </head>
   <body>
     <main class="container">
