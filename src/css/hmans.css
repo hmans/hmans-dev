@@ -1,0 +1,45 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap");
+
+/* Configuration */
+
+:root {
+  --background-color: #fff;
+  --text-color: #333;
+  --link-color: orange;
+}
+
+/* Utility classes */
+
+.container {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Main layout */
+
+* {
+  box-sizing: inherit;
+}
+html,
+body {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font: 16px/1.5 "Noto Sans";
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font: inherit;
+  font-weight: bold;
+  color: inherit;
+}
