@@ -1,12 +1,24 @@
 const CleanCSS = require("clean-css");
+const markdownIt = require("markdown-it");
 
-module.exports = function (config) {
+module.exports = function (eleventyConfig) {
   /* Passthroughs */
-  config.addPassthroughCopy("src/css");
-  config.addPassthroughCopy("src/images");
+  eleventyConfig.addPassthroughCopy("src/css");
+  eleventyConfig.addPassthroughCopy("src/images");
+
+  /* Markdown */
+  eleventyConfig.setLibrary(
+    "md",
+    markdownIt({
+      html: true,
+      breaks: true,
+      linkify: true,
+      typographer: true,
+    })
+  );
 
   /* cssmin filter */
-  config.addFilter("cssmin", function (code) {
+  eleventyConfig.addFilter("cssmin", function (code) {
     return new CleanCSS({}).minify(code).styles;
   });
 
