@@ -1,13 +1,10 @@
-/* Google Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap");
-
 /* Configuration */
 
 :root {
   /* Colors */
   --background-color: #fff;
   --text-color: #333;
-  --link-color: orange;
+  --link-color: rgb(0, 88, 182);
 
   /* Page Width */
   --page-width: 750px;
@@ -19,6 +16,12 @@
   max-width: var(--page-width);
   padding: 0 1rem;
   margin: 0 auto;
+}
+
+.full-bleed {
+  margin-left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
 }
 
 /* Main layout */
@@ -34,9 +37,11 @@ body {
 body {
   background-color: var(--background-color);
   color: var(--text-color);
-  font: 16px/1.5 "Noto Sans";
-
-  padding-top: 3rem;
+  font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  margin: 0;
+  padding: 0;
 }
 
 h1,
@@ -48,4 +53,30 @@ h6 {
   font: inherit;
   font-weight: bold;
   color: inherit;
+}
+
+a {
+  color: var(--link-color);
+}
+
+/* Main Header */
+header[role="main"] {
+  background-color: #eee;
+  padding: 1rem 0;
+  margin-bottom: 3rem;
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 2px;
+}
+
+/* Intro */
+section.intro {
+  margin-bottom: 3em;
+}
+
+.site-title {
+  font-weight: bold;
+  font-size: 200%;
+  color: rgb(206, 0, 62);
+  text-decoration: none;
 }
